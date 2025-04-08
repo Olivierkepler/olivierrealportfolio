@@ -1,0 +1,149 @@
+nextjs-tsx-scaffold/
+├── app/
+│   ├── layout.tsx                     # Root layout with Navbar
+│   ├── page.tsx                       # Homepage
+│   ├── dashboard/
+│   │   └── page.tsx                   # Protected route (server-side session check)
+│   ├── login/
+│   │   └── page.tsx                   # Login page
+│   ├── register/
+│   │   └── page.tsx                   # Register page
+│   └── api/
+│       ├── auth/
+│       │   └── [...nextauth]/route.ts # NextAuth.js server route
+│       └── register/
+│           └── route.ts               # API route for user registration
+
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx                 # Session-aware top navbar
+│   │   ├── Footer.tsx
+│   │   └── Sidebar.tsx
+│   ├── search/
+│   │   ├── GlobalSearch.tsx
+│   │   ├── SearchModal.tsx
+│   │   ├── SearchResult.tsx
+│   │   └── useSearch.ts
+│   ├── shared/
+│   │   ├── Card.tsx
+│   │   └── Avatar.tsx
+│   └── ui/
+│       ├── Button.tsx
+│       ├── Input.tsx
+│       └── Modal.tsx
+
+├── features/
+│   ├── auth/
+│   │   ├── AuthForm.tsx               # Validated login form with NextAuth
+│   │   ├── RegisterForm.tsx          # Validated register form with bcrypt
+│   │   └── authService.ts            # Placeholder or auxiliary auth logic
+│   └── blog/
+│       ├── BlogCard.tsx
+│       └── blogService.ts
+
+├── lib/
+│   ├── db.ts                          # Prisma client setup
+│   ├── authOptions.ts                # NextAuth.js config
+│   └── search.ts
+
+├── constants/
+│   ├── nav-links.ts
+│   └── search-sources.ts             # Local search data for fuse.js
+
+├── hooks/
+│   ├── useMounted.ts
+│   ├── useMediaQuery.ts
+│   └── useDarkMode.ts
+
+├── prisma/
+│   └── schema.prisma                 # Prisma DB schema with User model
+
+├── public/
+│   └── images/
+│       ├── logo.svg
+│       └── banner.png
+
+├── styles/
+│   ├── globals.css
+│   └── tailwind.css
+
+├── types/
+│   ├── index.ts
+│   ├── blog.ts
+│   └── search.ts
+
+├── tests/
+│   ├── components/
+│   │   └── Navbar.test.tsx
+│   └── utils/
+│       └── search.test.ts
+
+├── .env.local                        # Includes DATABASE_URL and NEXTAUTH_SECRET
+├── middleware.ts
+├── tailwind.config.js
+├── next.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
+
+
+
+Perfect, Yan! Let's begin building out the full **contents** for this project — clean, professional, and ready to scale.
+
+We’ll create everything step by step. Here's the plan:
+
+---
+
+## 📦 Phase 1: Core App Setup
+
+- [x] `app/layout.tsx`
+- [x] `app/page.tsx`
+- [x] `components/layout/Navbar.tsx`
+- [x] `styles/globals.css` + Tailwind setup
+- [x] `tailwind.config.js`
+
+---
+
+## 🔐 Phase 2: Authentication
+
+- [x] Login & Register pages
+- [x] Forms with `react-hook-form` + `zod`
+- [x] API route: `/api/register`
+- [x] Auth config: `authOptions.ts`
+- [x] NextAuth.js: `/api/auth/[...nextauth]/route.ts`
+- [x] Protected `dashboard/page.tsx`
+- [x] Prisma + `bcrypt` for real DB auth
+- [x] Session-aware `Navbar.tsx`
+
+---
+
+## 🔍 Phase 3: Global Search
+
+- [x] `GlobalSearch.tsx`
+- [x] `SearchModal.tsx` using `cmdk`
+- [x] Fuse.js-powered `useSearch.ts`
+- [x] `search-sources.ts` with mock data
+
+---
+
+## 📁 Phase 4: Extra Features & Organization
+
+- [ ] Add test files (`tests/`)
+- [ ] Add utility hooks
+- [ ] Add Blog feature example
+- [ ] Add README.md
+- [ ] Add useful scripts to `package.json`
+
+---
+
+### ⚙️ Suggested Approach
+Since we already scaffolded the folders and added placeholders, now we’ll start **filling each file** with complete, clean code.
+
+**Where would you like to begin?**
+- `1️⃣` Home layout and landing page?
+- `2️⃣` Authentication (Login/Register flow)?
+- `3️⃣` Global Search system?
+- `4️⃣` Protected dashboard?
+- `5️⃣` Prisma + DB setup guidance?
+
+You pick, and I’ll start generating the content in clean chunks.
